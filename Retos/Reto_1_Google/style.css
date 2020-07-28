@@ -1,0 +1,158 @@
+@font-face {
+    font-family: google;
+    src: url(./src/Product\ Sans\ Regular.ttf)
+}
+
+
+@font-face {
+    font-family: 'Segoe UI Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Bold'), url(./src/fonts/Segoe\ UI\ Bold.woff) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    /* max-width: 100%;
+    width: 1440px; */
+    background-color: rgb(61, 124, 226);
+}
+
+/* header {} */
+
+h1 {
+    margin: 0;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 90px;
+    font-family: "google";
+    color: white;
+}
+
+.container {
+
+    margin: 100px auto;
+    max-width: 100%;
+    width: 600px;
+    /* background-color: salmon; */
+    display: flex;
+    flex-direction: column;
+
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input {
+    width: 100%;
+    position: relative;
+}
+
+input {
+
+    border: none;
+    border-radius: 30px;
+    height: 42px;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 15px;
+    padding-left: 60px;
+}
+
+.input-inicio {
+    /* margin: auto; */
+    position: absolute;
+    width: 30px;
+    left: 20px;
+    top: 12px;
+}
+
+.input-final {
+
+    position: absolute;
+    top: 13px;
+    left: 570px;
+
+}
+
+input:focus {
+    outline: none;
+}
+
+nav {
+
+    display: flex;
+    justify-content: flex-end;
+    padding: 28px;
+    align-items: center;
+}
+
+nav .btn {
+    margin-left: 12px;
+    color: white;
+    font-size: 12px;
+    font-family: "Segoe UI Bold";
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.circle {
+
+    margin: 45px;
+    background-color: rgb(241, 243, 244);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+    /* justify-content: center; */
+
+
+}
+
+.circle p {
+    margin-top: 20px;
+
+    text-align: center;
+    color: white;
+    font-family: 'google';
+    font-size: 12px;
+    /* font-weight: 700px; */
+    width: 88px;
+    font-family: "Segoe UI Bold";
+
+
+}
+
+.circle .imagen {
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    /* padding: 10px; */
+
+
+}
+
+img {
+    /* margin: auto;*/
+    display: block;
+    max-height: 60%;
+    /* max-width: 80%; */
+}
