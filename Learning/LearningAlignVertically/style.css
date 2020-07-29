@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: peru;
+
+}
+
+/* Cuando se conoce la altura del elemento */
+
+/* KnownHeight es el padre ( contenedor ) */
+.KnownHeight {
+    position: relative;
+    height: 200px;
+    margin: 20px;
+    width: 300px;
+    background-color: white;
+
+}
+
+.KnownHeight div {
+    position: absolute;
+    background-color: black;
+    color: white;
+    height: 80px;
+    top: 50%;
+    /* 1. Hemos centrado nustro inicio del elemento(div) con respecto a nuestro parent*/
+    /* From the parent height = 100px*/
+    margin-top: -40px;
+    /*Ahora movemos el elemento hacia arriba para que queda centrado, el valor es la mitad de nuestro height del elemento*/
+    overflow: auto;
+}
