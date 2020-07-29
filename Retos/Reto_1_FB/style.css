@@ -27,10 +27,18 @@
     flex-direction: column;
 }
 
+.chat-search {
+    padding: 20px;
+}
+
 .chat input {
-    margin: 20px;
+    /* margin: 0 20px; */
+    height: 30px;
+    border: none;
+    border-radius: 10px;
     width: 100%;
     display: block;
+    /* margin: 2px; */
 }
 
 .chat-title {
@@ -49,6 +57,11 @@
 .chat-title .icons {
     display: flex;
     background-color: purple;
+}
+
+.miniChats {
+    display: inline-flex;
+    margin: 10px;
 }
 
 .element1 {
