@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.main {
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.leftBox {
+    height: 100vh;
+    width: 60%;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: intro;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+
+    box-shadow: inset -7px 0px 9px 2px rgba(0, 0, 0, 0.21);
+
+}
+
+.title {
+    margin-left: 40%;
+    width: 50%;
+}
+
+.first-sentence {
+    font-size: 40px;
+    font-weight: 800;
+    padding-bottom: 20px;
+}
+
+.name {
+    font-size: 40px;
+    font-weight: 700;
+    background-color: #3061B1;
+    color: #f8f8f8;
+    padding: 40px 40px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.rightBox {
+    height: 100vh;
+    width: 40%;
+    background-color: #3061B1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* animation-duration: 3s;
+    animation-timing-function: ease-out; */
+
+    /* transform: matrix(1, 0, 0, 1, 0, 0);
+    transition: transform 150ms cubic-bezier(1, 0, 0, 1) 0ms */
+}
+
+.carrera {
+
+
+    height: 40px;
+    background-color: violet;
+
+}
+
+@keyframes intro {
+    0% {
+        background-color: #f2f2f2;
+        width: 100%;
+    }
+
+    20% {
+        background-color: #f2f2f2;
+        width: 100%;
+    }
+
+    80% {
+        background-color: #f2f2f2;
+        width: 100%;
+    }
+
+
+    100% {
+        background-color: #f2f2f2;
+        width: 60%;
+    }
+}
+
+@keyframes intro2 {
+
+    0%,
+    50% {
+        background-color: #f2f2f2;
+        width: 0%;
+    }
+
+    100% {
+        background-color: #3061B1;
+        width: 40%;
+    }
+}
+
+
+/* Animation background */
