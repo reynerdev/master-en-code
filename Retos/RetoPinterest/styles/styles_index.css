@@ -1,0 +1,131 @@
+/*Estilos Generales de las collage de images BY JEQD*/
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap');
+
+
+body {
+
+    padding: 0px;
+    color: black;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+
+}
+
+#contenedor_1 {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.columna {
+    width: 238px;
+    margin-left: 20px;
+}
+
+
+.img_1 {
+    width: 236px;
+    height: 495px;
+    border-radius: 16px;
+
+}
+
+.img_2 {
+    width: 236px;
+    height: 350px;
+    border-radius: 16px;
+
+}
+
+.img_3 {
+    width: 236px;
+    height: 235px;
+    border-radius: 16px;
+
+}
+
+/* reyner */
+.insideContent {
+    display: none;
+}
+
+/* reyner */
+.columna .hov {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-in;
+    /* padding: 25px 0; */
+}
+
+
+
+/* reyner */
+.columna .hov:hover .insideContent {
+    height: 94%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    /* z-index: 1; */
+    background-color: rgba(0, 0, 0, 0.253);
+
+}
+
+
+.up {
+    display: flex;
+    width: 100%;
+}
+
+select {
+    flex: 62%;
+    height: 44px;
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+    padding-left: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    border: none;
+
+}
+
+select option {
+    text-align: center;
+}
+
+.up button {
+    flex: 28%;
+    border: none;
+    background-color: #e60023;
+    color: #fff;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+
+}
+
+
+.down {
+    display: flex;
+    width: 100%;
+}
+
+/* reyner */
+
+.down.link {
+    text-overflow: ellipsis;
+}
+
+/*@medias BY JEQD*/
+
+@media (max-width: 1316px) {
+    .columna6 {
+        display: none;
+    }
+}
