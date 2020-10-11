@@ -79,3 +79,124 @@ const removeContenedor = (nameContenedor, arr) => {
 };
 
 console.log(removeContenedor('cont3', contenedor));
+
+// 5.- Se tiene una cola de colores y se tiene que dividir en dos colas, respetando el orden y alternando a partir de su índice. los pares en una y los nones en otra
+
+// Cola original:
+
+// Cola 1: [ amarillo, rojo, azul, morado]
+
+// Cola 2: [rosa, verde, negro, blanco]
+
+// Implementando el Queque (Cola)
+
+let cola1 = [];
+const cola2 = [];
+
+const colaOriginal = [
+  'amarillo',
+  'rosa',
+  'rojo',
+  'verde',
+  'azul',
+  'negro',
+  'morado',
+  'blanco',
+];
+
+const separarCola = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (i % 2 == 0) {
+      cola1.push(arr[i]);
+    } else {
+      cola2.push(arr[i]);
+    }
+  }
+};
+
+separarCola(colaOriginal);
+console.log('Pregunta5:\n', cola1, cola2);
+
+function Queque() {
+  this.elements = [];
+}
+
+Queque.prototype.enqueue = function (e) {
+  this.elements.push(e);
+};
+
+Queque.prototype.dequeue = function () {
+  return this.elements.shift();
+};
+
+// 6.- Se tiene una cola en la cual se han repartido tickets con el orden de atención. Sin embargo, llegada la hora de inicio hay muchos “colados”,
+//es por esto que se le ordena al vigilante que retire a todos aquellos que no tienen ticket. Muestra la cola inicial, qué elementos fueron retirados de la cola y la cola final.
+// Sugerencia: desencolar cada elemento, si tiene el ticket se vuelve a encolar, si no se retira.
+
+// Cola: [
+
+// { user:‘User1’, ticket:true },
+
+// { user:‘User2’, ticket:true },
+
+// { user:‘User3’, ticket:false },
+
+// { user:‘User4’, ticket:true },
+
+// { user:‘User5’, ticket:false },
+
+// { user:‘User6’, ticket:false },
+
+// { user:‘User7’, ticket:true },
+
+// { user:‘User8’, ticket:true },
+
+// { user:‘User9’, ticket:true },
+
+// { user:‘User10’, ticket:false },
+
+// { user:‘User11’, ticket:true },
+
+// ];
+
+const cola = [
+  { user: 'User1', ticket: true },
+
+  { user: 'User2', ticket: true },
+
+  { user: 'User3', ticket: false },
+
+  { user: 'User4', ticket: true },
+
+  { user: 'User5', ticket: false },
+
+  { user: 'User6', ticket: false },
+
+  { user: 'User7', ticket: true },
+
+  { user: 'User8', ticket: true },
+
+  { user: 'User9', ticket: true },
+
+  { user: 'User10', ticket: false },
+
+  { user: 'User11', ticket: true },
+];
+
+elementosRetirados = [];
+arrayFinal = [];
+const removeColados = (cola) => {
+  let times = cola.length;
+  for (let index = 0; index < times; index++) {
+    let shiftedVal = cola.shift();
+    console.log(shiftedVal);
+    if (shiftedVal.ticket === true) {
+      arrayFinal.push(shiftedVal);
+    } else {
+      elementosRetirados.push(shiftedVal);
+    }
+  }
+};
+
+removeColados(cola);
+console.log('Pregunta6\n', elementosRetirados, arrayFinal);
