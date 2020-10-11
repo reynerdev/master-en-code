@@ -71,6 +71,12 @@ class SLList {
   }
 
   size(){
+    rere
+  }
+
+
+  /* To create this function we need to use a special helper */
+  size(){
 
     if(this.first.head === null){
       return 0 
