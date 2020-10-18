@@ -16,6 +16,7 @@ class Node {
 class BinaryTree {
   constructor(val) {
     this.root = new Node(val);
+    this.b = {};
   }
 
   addLeft(val) {}
@@ -38,6 +39,9 @@ class BinaryTree {
 
   copyBinaryTree(a) {
     if (a == null) {
+      a.data = null;
+    } else {
+      this.b = new Node(a.data, a.left, a.right);
     }
   }
 }
