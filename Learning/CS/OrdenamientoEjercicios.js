@@ -154,3 +154,98 @@ console.log(classA.students);
 classA.ordernarByPromedio();
 console.log('SORTED');
 console.log(classA.students);
+
+// 4* Crear una funcion que ordene palabras de menor numero de letras a mayor
+// Ej Entrada [“adios”,“hola”,“maximo”,“uno”,“despedida”]
+// salida -> [“”uno,“hola”,“adios”,“maximo”,“despedida”]
+
+function ordenar(arr) {
+  ordenarByStringLenght(arr, 0, arr.length - 1);
+}
+
+function ordenarByStringLenght(arr, start, end) {
+  if (start < end) {
+    let index = partition4(arr, start, end);
+    ordenarByStringLenght(arr, start, index - 1);
+    ordenarByStringLenght(arr, index + 1, end);
+  }
+}
+
+function partition4(arr, start, end) {
+  let pivot = arr[end].length;
+  let pindex = start;
+  for (let i = start; i < end; i++) {
+    if (arr[i].length <= pivot) {
+      let temp = arr[pindex];
+      arr[pindex] = arr[i];
+      arr[i] = temp;
+      pindex++;
+    }
+  }
+
+  let temp = arr[pindex];
+  arr[pindex] = arr[end];
+  arr[end] = temp;
+
+  return pindex;
+}
+
+a = ['adios', 'hola', 'maximo', 'uno', 'despedida'];
+ordenar(a);
+console.log(a);
+
+// 5. Crear una función que ordene un arreglo de coordenadas x, y desde a partir del punto mas cercano a 0,0
+// Entrada -> [[7,3],[2,2],[1,0],[4,3]]
+// Salida ---> [[1,0],[2,2],[4,3],[7,3]]
+
+Array.prototype.distance = function () {
+  let sum = 0;
+  for (i = 0; i < this.length; i++) {
+    sum = sum + Math.pow(this[i], 2);
+  }
+
+  return Math.pow(sum, 0.5);
+};
+
+function ordenar5(arr) {
+  quicksort5(arr, 0, arr.length - 1);
+}
+
+function quicksort5(arr, start, end) {
+  if (start < end) {
+    let index = partition5(arr, start, end);
+    quicksort5(arr, start, index - 1);
+    quicksort5(arr, index + 1, end);
+  }
+}
+
+function partition5(arr, start, end) {
+  let pivot = arr[end].distance();
+  let pindex = start;
+  for (let i = start; i < end; i++) {
+    if (arr[i].distance() <= pivot) {
+      let temp = arr[pindex];
+      arr[pindex] = arr[i];
+      arr[i] = temp;
+      pindex++;
+    }
+  }
+
+  let temp = arr[pindex];
+  arr[pindex] = arr[end];
+  arr[end] = temp;
+  console.log(arr);
+  return pindex;
+}
+
+coordenadas = [
+  [7, 3],
+  [2, 2],
+  [1, 0],
+  [4, 3],
+];
+console.log(coordenadas);
+
+ordenar5(coordenadas);
+
+console.log(coordenadas);
