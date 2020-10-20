@@ -2,7 +2,7 @@
 // Ej. Entrada --> [9,3,1,6,5,88,-1,2,7]
 // Salida → [88,9,7,6,5,3,1,-1]
 
-class QuickSort {
+export class QuickSort {
   static sort(arr, reverse = false) {
     this.quicksort(arr, 0, arr.length - 1, reverse);
     // arr.shift();
@@ -58,6 +58,7 @@ class QuickSort {
     return index;
   }
 }
+
 let A = [7, 2, 1, 6, 8, 5, 3, 4];
 let B = [9, 3, 1, 6, 5, 88, -1, 2, 7];
 //1* Reverse, el valor de true, significa que se ordena en forma reversa
