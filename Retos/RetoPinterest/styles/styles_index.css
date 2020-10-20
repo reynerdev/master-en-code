@@ -12,7 +12,7 @@
 
 body {
 
-    padding: 0px;
+    
     color: #211922;
     font-family: 'Oxygen', sans-serif;
     font-weight: bold;
@@ -194,11 +194,11 @@ input:focus {
 
 }
 
-.nav_icons div:active {
+/* .nav_icons div:active {
     border-color: aqua;
 
 
-}
+} */
 
 .nav_icons img {
     height: 24px;
@@ -228,9 +228,18 @@ input:focus {
 a {
     text-decoration: none;
     color: #333;
+    display: flex;
+    align-items: center;
 
 }
 
+.nav_icons  a:active {
+    border-radius: 50%;
+
+    border: 3px solid rgb(127,193,255);
+    /* background-color: #111; */
+}
+ 
 #contenedor_1 {
 
     display: flex;
@@ -238,6 +247,7 @@ a {
     justify-content: center;
     flex-wrap: wrap;
     /* margin-top: 70px; */
+    padding-top: 100px;
 
 }
 
@@ -293,8 +303,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     position: absolute;
-    /* z-index: 1; */
     background-color: rgba(0, 0, 0, 0.253);
     border-radius: 16px;
 
@@ -421,6 +431,10 @@ button:focus {
 
 
 }
+
+/* .columna div {
+    margin-bottom: 7px;
+} */
 
 /*@medias BY JEQD*/
 

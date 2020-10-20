@@ -3,22 +3,208 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap');
 
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
 
 body{
-    padding: 0px;
+    /* paddng: 0px; */
     color: black;
     font-family: 'Oxygen', sans-serif;
     font-weight: bold;
+}
+
+
+
+nav {
+    background-color: white;
+    font-size: 16px;
+    font-weight: 700;
+    height: 80px;
+    /* position: fixed; */
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    /* margin-bottom: 60px; */
+    /* bottom: 0px; */
+    z-index: 1;
 }
 
 a{
     text-decoration: none;
 }
 
+.nav_icon,
+.nav_inicio,
+.nav_siguiendo {
+    flex: 0 0 auto;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nav_inicio,
+.nav_siguiendo {
+    padding-left: 16px;
+    padding-right: 16px;
+
+
+}
+
+.nav_inicio {
+    background-color: #333;
+    color: #fff;
+    border-radius: 24px;
+}
+
+.nav_siguiendo:hover {
+    background-color: #efefef;
+    color: #333;
+    border-radius: 24px;
+    font-size: 16px;
+
+}
+
+nav a {
+    color: inherit;
+}
+
+
+.nav_icon {
+    fill: #e60023;
+    width: 48px;
+}
+
+.nav_input {
+    flex: 1 1 auto;
+    display: flex;
+    border-radius: 24px;
+    height: 48px;
+    min-width: 400px;
+    background-color: #efefef;
+    align-items: center;
+    fill: #767676;
+    color: #767676;
+
+}
+
+.lupa {
+    flex: 0 0 auto;
+    /* display: flex; */
+}
+
+.lupa svg {
+    /* padding-left: 16px; */
+    margin-left: 16px;
+    margin-right: 8px;
+}
+
+input {
+    flex: 0 0 auto;
+    border: none;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #767676;
+    font-size: 16px;
+}
+
+.nav_input:hover {
+    background-color: rgb(225, 225, 225);
+}
+
+input:focus {
+    outline-style: none;
+}
+
+.nav_icons {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    fill: #767676;
+    margin-left: 10px;
+    cursor: pointer;
+
+
+}
+
+.nav_icons div {
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nav_icons div:hover {
+    background-color: #efefef;
+    border-radius: 50%;
+
+}
+
+/* .nav_icons div:active {
+    border-color: aqua;
+
+
+} */
+
+.nav_icons img {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+
+}
+
+.nav_bell {
+    position: relative;
+}
+
+#notificacion {
+    position: absolute;
+    background-color: #e60023;
+    height: 18px;
+    width: 18px;
+    font-size: 12px;
+    right: 4px;
+    top: 4px;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 50px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+
+}
+
+.nav_icons  a:active {
+    border-radius: 50%;
+
+    border: 3px solid rgb(127,193,255);
+    /* background-color: #111; */
+}
+
 #perfil_datos{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 100px;
+    justify-content: center;
 }
 
 article img{
@@ -45,9 +231,13 @@ article img{
     align-items: center;
 }
 
+#izquierda, #derecha {
+    display: flex;
+}
 #izquierda img{
     width: 40px;
     height: 40px;
+    display: flex;
 }
 
 #centro{
@@ -88,9 +278,9 @@ article img{
 #tableros{
     display: flex;
     flex-wrap: wrap;
-    margin-left: 120px;
+    /* margin-left: 120px; */
     margin-top: 17px;
-
+    justify-content: center;
 }
 
 .tablero{
@@ -118,4 +308,36 @@ article img{
     font-size: 12px;
     margin-top: 10px;
     margin-bottom: 28px;
+}
+
+@media screen and (max-width: 1581px) {
+    #contenedor_1 {
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .nav_icon,
+    .nav_inicio,
+    .nav_siguiendo
+    
+    {
+        display: none;
+    }
+
+    .nav_icons .nav_bell{
+        display: none;
+    }
+
+    .nav_icons .nav-profile{
+        display: none;
+    }
+
+    .nav_icons .nav_arrow{
+        display: none;
+    }
+
+    .nav_input{
+        min-width: 50px;
+    }
+
 }
