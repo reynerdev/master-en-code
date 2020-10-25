@@ -2,18 +2,9 @@
 class QuickSort {
     static sort(arr, reverse = false) {
       this.quicksort(arr, 0, arr.length - 1, reverse);
-      // arr.shift();
     }
   
     static quicksort(arr, start, end, reverse) {
-      // if (start >= end) {
-      //   return;
-      // }
-  
-      // let index = this.partition(arr, start, end);
-  
-      // this.quicksort(arr, start, index - 1);
-      // this.quicksort(arr, index + 1, end);
   
       if (start < end) {
         let index = this.partition(arr, start, end, reverse);
@@ -98,9 +89,11 @@ console.log(input)
 
 function BinarySearch2 (a,value,start,end){
 
+    let result = -1 
     while(start<=end){
         let mid = Math.trunc((start+end)/2)
         if(a[mid] ==value){
+
             return value
         }else if( a[mid]< value)
         {
@@ -111,7 +104,7 @@ function BinarySearch2 (a,value,start,end){
         }
     }
 
-    return -1 
+    return result
 
 
 }
