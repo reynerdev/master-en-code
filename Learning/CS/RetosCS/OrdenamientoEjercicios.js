@@ -2,7 +2,7 @@
 // Ej. Entrada --> [9,3,1,6,5,88,-1,2,7]
 // Salida → [88,9,7,6,5,3,1,-1]
 
-export class QuickSort {
+ class QuickSort {
   static sort(arr, reverse = false) {
     this.quicksort(arr, 0, arr.length - 1, reverse);
     // arr.shift();
@@ -198,6 +198,8 @@ console.log(a);
 // 5. Crear una función que ordene un arreglo de coordenadas x, y desde a partir del punto mas cercano a 0,0
 // Entrada -> [[7,3],[2,2],[1,0],[4,3]]
 // Salida ---> [[1,0],[2,2],[4,3],[7,3]]
+
+// Aplicando los conocimientos de vectores, hallamos la distancia del 0.0 hacia el punto mediante propiedades de vectores sqrt(a^2 + b^2) = distancia
 
 Array.prototype.distance = function () {
   let sum = 0;
