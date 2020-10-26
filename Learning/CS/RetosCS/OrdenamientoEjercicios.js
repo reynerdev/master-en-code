@@ -2,7 +2,7 @@
 // Ej. Entrada --> [9,3,1,6,5,88,-1,2,7]
 // Salida → [88,9,7,6,5,3,1,-1]
 
- class QuickSort {
+class QuickSort {
   static sort(arr, reverse = false) {
     this.quicksort(arr, 0, arr.length - 1, reverse);
     // arr.shift();
@@ -67,6 +67,21 @@ console.log(A);
 QuickSort.sort(B, true);
 console.log(B);
 
+/*2 Crear una función que ordene una lista de caracteres según su valor decimal de acuerdo a la tabla ascii ref: http://www.asciitable.com/
+Ej. Entrada ---> [‘b’,‘h’,‘w’,‘e’,‘a’]
+Salida ----> [‘a’,‘b’,‘e’,‘h’,‘w’]
+*/
+
+let input = ['b', 'h', 'w', 'e', 'a'];
+function ordenaListaCaracteres(input) {
+  let asciiarray = input.map((element) => element.charCodeAt(0));
+  QuickSort.sort(asciiarray);
+  let ordered = asciiarray.map((element) => String.fromCharCode(element));
+  return ordered;
+}
+
+console.log(ordenaListaCaracteres(input), 'Pregunta 2');
+
 /* 3* Crear una clase Alumno con los siguientes datos:
 Nombre y calificaciones(arreglo de 5 números) y tiene un método para obtener el promedio
 Crear otra clase llamada Salon que tenga un método que ordene alumnos de mayor a menor promedio*/
@@ -102,6 +117,7 @@ class Classroom {
     this.students.push(student);
   }
 
+  // una version de quicksort adaptada al problema
   ordernarByPromedio() {
     this.quicksortclassroom(this.students, 0, this.students.length - 1);
   }
@@ -192,6 +208,7 @@ function partition4(arr, start, end) {
 }
 
 a = ['adios', 'hola', 'maximo', 'uno', 'despedida'];
+// ordenamos nuestros elementos en base al tamano de la palabra
 ordenar(a);
 console.log(a);
 
@@ -201,6 +218,7 @@ console.log(a);
 
 // Aplicando los conocimientos de vectores, hallamos la distancia del 0.0 hacia el punto mediante propiedades de vectores sqrt(a^2 + b^2) = distancia
 
+// Agregamos una metodo a nuestro array
 Array.prototype.distance = function () {
   let sum = 0;
   for (i = 0; i < this.length; i++) {
@@ -210,6 +228,7 @@ Array.prototype.distance = function () {
   return Math.pow(sum, 0.5);
 };
 
+// una version de quicksort adaptado al problema 5
 function ordenar5(arr) {
   quicksort5(arr, 0, arr.length - 1);
 }
@@ -249,6 +268,8 @@ coordenadas = [
 ];
 console.log(coordenadas);
 
+// Llamamos a la funcion para ordenar nuestro array
 ordenar5(coordenadas);
 
+// Las coordenas ordenadas !!!!!
 console.log(coordenadas);
